@@ -1,18 +1,19 @@
-# Real Estate Website
+# Real Estate Website  
 
-A responsive real estate website template showcasing project overview, amenities, and an enquiry form.
+A responsive real estate website built with **HTML, CSS, Bootstrap, and JavaScript**.  
 
-## Features
-- Responsive design
-- Navigation with smooth scrolling
-- Amenities and overview sections
-- Enquiry form popup
+## Features  
+- Sticky navigation bar with smooth scrolling  
+- Overview, Amenities, Gallery sections  
+- Enquiry form popup with blurred background (JavaScript)  
+- Responsive design for mobile & desktop  
 
-## Tech Stack
-- HTML
-- CSS
-- JavaScript
+## Tech Stack  
+- HTML5  
+- CSS3  
+- Bootstrap 5  
+- JavaScript (Vanilla JS)  
 
-## How to Run
-1. Clone the repository
-2. Open `index.html` in your browser
+---
+*(Private Repository – No public deployment yet)*  
+
