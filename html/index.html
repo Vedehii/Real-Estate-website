@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Aranya</title>
+
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+  <!-- Bootstrap animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+
+  <style>
+  :root {
+    --brand-green: rgba(0, 229, 161, 1);
+  }
+
+  .font-gabriela {
+    font-family: 'Gabriela', serif;
+  }
+
+  .bg-image {
+    background-image: url('/assets/heroImage.png');
+    min-height: 150vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Mumbai Button */
+  .mumbai-btn {
+    border: 1.5px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 8px 28px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 6px;
+  }
+
+  /* Project Title */
+  .project-title {
+    font-size: 150px;
+    font-weight: 500px;
+    line-height: 1;
+  }
+
+  /* Piramal Group Text */
+  .piramal-text {
+    font-family: 'Playfair Display', serif;
+    color: var(--brand-green);
+    margin-top: 15px;
+    font-size: 1.2rem;
+  }
+
+  /* Scroll Circle */
+  .scroll-indicator {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .scroll-indicator svg {
+    transform: rotate(-90deg);
+  }
+
+  .circle-arrow {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .circle-arrow .arrow {
+    font-size: 1.5rem;
+    animation: bounce 1.5s infinite;
+  }
+
+  /* Bounce animation */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+  /* Search Box */
+  .search-box {
+    height: 96px;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 17px;
+    background-color: azure;
+  }
+
+  .divider {
+    width: 1px;
+    height: 40px;
+    background-color: gray;
+  }
+
+  /* Image Wrapper */
+  .img-wrapper {
+    width: 400px;
+    height: 500px;
+    position: relative;
+  }
+
+  .img-base {
+    position: absolute;
+    width: 300px;
+    height: 420px;
+    top: 80px;
+    left: 0;
+    transform: rotate(-15deg);
+    border: 1px solid rgba(255, 213, 137, 1);
+    object-fit: cover;
+  }
+
+  .img-overlay {
+    position: absolute;
+    width: 360px;
+    height: 450px;
+    top: 40px;
+    left: 80px;
+    transform: rotate(8deg);
+    z-index: 2;
+    object-fit: cover;
+  }
+
+  /* Text */
+  .content1-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.09em;
+  }
+
+ /* NUMBERS SECTION */
+.numbers-section {
+  background-color: #1A2440;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.numbers-section .row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;   /* spacing between columns */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.numbers-section .stat {
+  flex: 1;
+  min-width: 200px; /* responsive */
+}
+
+.numbers-section .stat .number {
+  font-family: 'Gabriela', serif;
+  font-weight: 500;
+  font-size: 64px;
+  color: rgba(0, 229, 161, 1);
+  white-space: nowrap; /* Prevents breaking into 2 lines */
+}
+
+
+.numbers-section .stat .label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffffcc;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+
+    @media (max-width: 768px) {
+      .display-custom {
+        font-size: 4rem;
+      }
+
+      .search-box {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    .stats-container {
+      margin-top: 72px;
+      padding: 0 1rem;
+      /* px-3 in Bootstrap */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      font-family: 'Gabriela', serif;
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 100%;
+      letter-spacing: -0.05em;
+    }
+
+    .stat-value {
+      color: rgba(0, 229, 161, 1);
+    }
+
+    .labels-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      /* px-3 in Bootstrap */
+    }
+
+    .label-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      color: rgba(165, 165, 165, 1);
+    }
+
+    .contact-map-section {
+      display: flex;
+      align-items: stretch;
+      position: relative;
+      height: 500px;
+      background-color: #1A2440;
+      /* dark blue */
+      overflow: hidden;
+    }
+
+    .contact-form {
+      flex: 1;
+      padding: 40px;
+      color: white;
+      z-index: 2;
+    }
+
+    .faded-image-wrapper {
+      flex: 1;
+      position: relative;
+      background: radial-gradient(circle at left center,
+          rgba(19, 28, 56, 0) 0%,
+          rgba(19, 28, 56, 1) 100%);
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .map-image {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+    }
+
+    .contact-us-section {
+      background-color: rgba(26, 36, 64, 1);
+      /* Dark navy background */
+      padding: 50px 200px;
+      color: white;
+      font-family: 'poppins';
+    }
+
+    .contact-title {
+      font-family: 'Lora', serif;
+      font-size: 50px;
+      font-weight: 400px;
+      margin-bottom: 50px;
+    }
+
+    .contact-subtitle {
+      font-size: 12px;
+      color: rgba(165, 165, 165, 1);
+
+      margin-bottom: 50px;
+    }
+
+    .input-group-text {
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 1);
+      border-right: none;
+      font-family: 'poppins';
+      color: rgba(0, 229, 161, 1);
+      border-radius: 8px 0 0 8px;
+      margin-bottom: 19px;
+
+    }
+
+    .form-control {
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 1);
+      border-left: none;
+      color: white;
+      padding: 10px 15px;
+      /* Smaller left padding */
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 19px;
+    }
+
+    .form-control::placeholder {
+      color: rgba(165, 165, 165, 1);
+      font-size: 10px;
+      font-weight: 300;
+      text-align: left;
+      /* Make sure it stays left */
+    }
+
+    .submit-btn {
+      background-color: rgba(0, 229, 161, 1);
+      color: white;
+      margin-left: 100px;
+      padding: 10px 40px;
+      font-size: 12px;
+      border: none;
+
+    }
+
+    .submit-btn:hover {
+      background-color: #00c98f;
+    }
+
+    .input-group {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    /* amenities Section */
+    .amenities-section {
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .amenities-section h2 {
+      font-family: 'Lora', serif;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+
+    .amenity-card {
+      border-right: 1px solid #ddd;
+      padding: 20px;
+      height: 100%;
+      text-align: left;
+    }
+
+    .amenity-card:last-child {
+      border-right: none;
+    }
+
+    .amenity-number {
+      font-size: 22px;
+      font-weight: bold;
+      color: #00e5a1;
+      /* green */
+      margin-bottom: 10px;
+    }
+
+    .amenity-title {
+      font-family: sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .amenity-img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .amenity-text {
+      font-size: 14px;
+      color: #555;
+      font-family: sans-serif;
+    }
+
+    /* parallax Amenities*/
+    .parallax {
+      background-image: url('/assets/image 2.png');
+      min-height: 740px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    section {
+      height: auto;
+      min-height: 100vh;
+      /* optional */
+    }
+   html {
+  scroll-behavior: smooth;
+}
+
+/* Enquire Button */
+.enquire-btn {
+  background: #00e5a1;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.enquire-btn:hover {
+  background: #00c78a;
+  transform: scale(1.05);
+  color: #1a2440;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup Box */
+.popup {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 850px;
+  width: 90%;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0px 12px 30px rgba(0,0,0,0.35);
+  position: relative;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #1a2440;
+  transition: color 0.3s ease;
+}
+.close-btn:hover {
+  color: #00e5a1;
+}
+
+/* Popup Content Layout */
+.popup-content {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+/* Left Image */
+.popup-image {
+  flex: 0.9; /* ~40% */
+  max-width: 40%;
+}
+
+.popup-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Form */
+.popup-form {
+  flex: 1.3; /* ~60% */
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.popup-form h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a2440;
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #00e5a1;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 229, 161, 0.4);
+}
+
+/* Book Button */
+.submit-btn {
+  display: block;
+  width: 60%;           /* smaller width instead of 100% */
+  margin: 20px auto 0;  /* center horizontally + add spacing */
+  background: #1a2440;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.submit-btn:hover {
+  background: #00e5a1;
+  color: #1a2440;
+  transform: scale(1.05);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .popup-content {
+    flex-direction: column;
+  }
+
+  .popup-image {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+  }
+
+  .popup-form {
+    padding: 25px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+
+  </style>
+  <script>function openPopup() {
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+</head>
+
+<body>
+<!-- Hero Section -->
+<div class="position-relative text-white">
+  <div class="bg-image d-flex flex-column">
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-3">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="/assets/heroLogo.png" alt="Logo" height="54" width="184">
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav mb-2 mb-lg-0" style="gap: 30px;">
+            <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">OVERVIEW</a></li>
+            <li class="nav-item"><a class="nav-link" href="#amenities">AMENITIES</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#">GALLERY</a></li> -->
+          </ul>
+        </div>
+
+        <!-- Enquire Button -->
+        <!-- Enquire Now Button -->
+<button class="enquire-btn" onclick="openPopup()">Enquire Now</button>
+
+<!-- Popup Modal -->
+<div id="popup" class="popup-overlay">
+  <div class="popup">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <div class="popup-content">
+      <!-- Left Image -->
+      <div class="popup-image">
+        <img src="/assets/heroImage.png" alt="Project View">
+      </div>
+
+      <!-- Right Form -->
+      <div class="popup-form">
+        <h2>Book Site Tour</h2>
+        <form>
+          <div class="input-group">
+            <input type="text" placeholder="Name" required>
+          </div>
+          <div class="input-group">
+            <input type="email" placeholder="Email" required>
+          </div>
+          <div class="input-group">
+            <input type="tel" placeholder="Mobile" required>
+          </div>
+          <button type="submit" class="submit-btn">Book Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center flex-grow-1">
+
+      <!-- Mumbai Button -->
+      <button class="mumbai-btn mb-5">MUMBAI</button>
+
+      <!-- Project Title -->
+      <p class="font-gabriela project-title mt-5">PROJECT</p>
+      <p class="font-gabriela project-title">PARANYA</p>
+      <p class="lead fw-bold piramal-text">Pranya Groups</p>
+
+      <!-- Scroll Circle -->
+      <div class="scroll-indicator mt-5">
+        <svg width="150" height="150" viewBox="0 0 150 150">
+          <defs>
+            <path id="circlePath"
+              d="M 75, 75 m -60, 0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" />
+          </defs>
+          <text fill="#fff" font-size="12" letter-spacing="3">
+            <textPath href="#circlePath">
+              DISCOVER OUR PROJECT • DISCOVER OUR PROJECT •
+            </textPath>
+          </text>
+        </svg>
+        <div class="circle-arrow">
+          <span class="arrow">&#8595;</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+ <!-- Search Section -->
+<section class="text-white" style="background-color: #1A2440;">
+  <div class="container py-5">
+
+    <!-- Search Title -->
+    <p class="fw-bold mb-2" style="font-size: 18px;">Search your configuration</p>
+
+    <!-- Search Box -->
+    <div class="card search-box shadow">
+      <div class="d-flex align-items-center justify-content-between h-100 px-4">
+        
+        <!-- BHK -->
+        <div class="d-flex align-items-center">
+          <i class="bi bi-house-door-fill me-2 fs-4 text-dark"></i>
+          <span class="text-dark">2 BHK</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Price -->
+        <div class="d-flex align-items-center">
+          <i class="bi bi-currency-rupee me-2 fs-4 text-dark"></i>
+          <span class="text-dark">₹90L - ₹1.5Cr</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Location -->
+        <div class="d-flex align-items-center">
+          <i class="bi bi-geo-alt-fill me-2 fs-4 text-dark"></i>
+          <span class="text-dark">South Mumbai</span>
+        </div>
+
+        <!-- Search Button -->
+        <div>
+          <button class="btn btn-success rounded-circle" style="width: 45px; height: 45px;">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rotated Images Section -->
+  <section class="py-5 text-white">
+    <div class="container">
+
+      <!-- Row 1: Image Left, Text Right -->
+      <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+          <div class="position-relative img-wrapper mx-auto">
+            <img class="img-base" src="/assets/baseImage.png" alt="Base image">
+            <img class="img-overlay" src="/assets/Rectangle 67.png" alt="Overlay image">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <p class="content1-text animate__animated animate__fadeInUp">
+            Presenting Piramal Aranya, a high rise gated sanctuary that offers luxuriant 2, 3 & 4 BHK homes inclusive
+            of advanced wellness technologies, dual-aspect blue and green views and a world-class lifestyle crafted
+            alongside the world’s leading partners at Rani Baug, Byculla, South Mumbai.
+          </p>
+        </div>
+      </div>
+
+      <!-- Row 2: Text Left, Image Right -->
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="content1-text animate__animated animate__fadeInUp">
+            • All bedrooms with en-suite bathrooms<br>
+            • Apartments with harbour views<br>
+            • Master bedroom with corner windows offering panoramic views<br>
+            • All shafts on the external face<br>
+            • Kitchen with dry balcony<br>
+            • Ease of combining apartments to create exclusive wing apartment with expansive living & dining area<br>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="position-relative img-wrapper mx-auto">
+            <img class="img-base" src="/assets/baseImage.png" alt="Base image">
+            <img class="img-overlay" src="/assets/Rectangle 71.png" alt="Overlay image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div class="mb-5 numbers-section justify-content-center">
+  <div class="row">
+    <div class="stat">
+      <div class="number mb-0">50+</div>
+      <div class="label">Amenities</div>
+    </div>
+    <div class="stat">
+      <div class="number mb-0">250</div>
+      <div class="label">Apartments</div>
+    </div>
+    <div class="stat">
+      <div class="number mb-0">9,290</div>
+      <div class="label">Recreational Space</div>
+    </div>
+    <div class="stat">
+      <div class="number mb-0">1,200</div>
+      <div class="label">Slot Car Parking</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <!-- 30+ PREMIUM AMENITIES Section -->
+    <section class="bg-white " id="amenities">
+      <div class="container text-center text-dark">
+        <!-- Title -->
+        <p class="text-success fw-bold mb-1 py-3">ARANYA’S SERVICES</p>
+        <p
+          style="font-family: Gabriela; font-weight: 500; font-size: 48px; line-height: 1.2; letter-spacing: -1px; margin-bottom: 20px;">
+          30+ PREMIUM AMENITIES
+        </p>
+      </div>
+
+      <!-- Amenities Grid -->
+      <div class="container">
+        <div class="row text-center text-dark g-3 py-5 mb-5">
+          <!-- Reception -->
+          <div class="col-md-4">
+            <div class="p-2">
+              <img src="https://img.icons8.com/ios-filled/50/40C057/phone.png" class="mb-2" alt="Reception">
+              <h5 class="fw-bold">RECEPTION</h5>
+              <p class="mb-0">6 Area For Receptionist Serve 24/7</p>
+            </div>
+          </div>
+          <!-- Security -->
+          <div class="col-md-4">
+            <div class="p-2">
+              <img src="https://img.icons8.com/ios-filled/50/40C057/security-checked.png" class="mb-2" alt="Security">
+              <h5 class="fw-bold">SECURITY</h5>
+              <p class="mb-0">Security Team With 24/7 Camera System</p>
+            </div>
+          </div>
+          <!-- Fire Alarm -->
+          <div class="col-md-4">
+            <div class="p-2">
+              <img src="https://img.icons8.com/ios-filled/50/40C057/alarm.png" class="mb-2" alt="Fire Alarm">
+              <h5 class="fw-bold">FIRE ALARM</h5>
+              <p class="mb-0">Automatic Fire Extinguishing System</p>
+            </div>
+          </div>
+          <!-- Parking -->
+          <div class="col-md-4">
+            <div class="p-2">
+              <img src="https://img.icons8.com/ios-filled/50/40C057/car.png" class="mb-2" alt="Parking">
+              <h5 class="fw-bold">PARKING</h5>
+              <p class="mb-0">Parking Area With Extra Capacity</p>
+            </div>
+          </div>
+          <!-- Conference Room -->
+          <div class="col-md-4">
+            <div class="p-2">
+              <img src="https://img.icons8.com/ios-filled/50/40C057/conference-call.png" class="mb-2"
+                alt="Conference Room">
+              <h5 class="fw-bold">CONFERENCE ROOM</h5>
+              <p class="mb-0">5 Conference Room Setup In Each Block</p>
+            </div>
+          </div>
+          <!-- Conditioning -->
+          <div class="col-md-4">
+            <div class="p-2">
+              <img src="https://img.icons8.com/ios-filled/50/40C057/air-conditioner.png" class="mb-2"
+                alt="Conditioning">
+              <h5 class="fw-bold">CONDITIONING</h5>
+              <p class="mb-0">Ensure Ventilation And Air Conditioning</p>
+            </div>
+          </div>
+          <!-- Supermarket -->
+          <div class="col-md-4">
+            <div class="p-2">
+              <img src="https://img.icons8.com/ios-filled/50/40C057/shopping-cart.png" class="mb-2" alt="Supermarket">
+              <h5 class="fw-bold">SUPERMARKET</h5>
+              <p class="mb-0">5 Supermarket In Each Block</p>
+            </div>
+          </div>
+          <!-- Spa & Massage -->
+          <div class="col-md-4">
+            <div class="p-2">
+              <img src="https://img.icons8.com/ios-filled/50/40C057/spa-flower.png" class="mb-2" alt="Spa">
+              <h5 class="fw-bold">SPA AND MASSAGE</h5>
+              <p class="mb-0">Spa And Massage Service For Better Health</p>
+            </div>
+          </div>
+          <!-- Pool -->
+          <div class="col-md-4">
+            <div class="p-2">
+              <img src="https://img.icons8.com/ios-filled/50/40C057/swimming.png" class="mb-2" alt="Pool">
+              <h5 class="fw-bold">4 SEASON POOL</h5>
+              <p class="mb-0">5 Star Indoor Swimming 4 Seasons</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full-width image -->
+      <section class="container-fluid px-0 mt-3 parallax-section">
+        <div class="parallax"></div>
+      </section>
+    </section>
+
+    <!-- AMENITIES SECTION -->
+
+    <section class="amenities-section" style="background-color:rgba(243, 244, 249, 1);">
+      <div class="container text-dark">
+        <h2>AMENITIES</h2>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-3 col-sm-6">
+            <div class="amenity-card">
+              <div class="amenity-number">1</div>
+              <div class="amenity-title">TOP CLASS CLUB & FACILITIES</div>
+              <img src="/assets/Rectangle 72.png" class="amenity-img" alt="Amenity 1">
+              <p class="amenity-text">
+                With A Wide Range Of Active And Relaxing Hubs, Kids As Well As Adult Spaces And Curated Indoor & Outdoor
+                Activities, Be Tempted To Try Something New Every Day.
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-3 col-sm-6">
+            <div class="amenity-card">
+              <div class="amenity-number">2</div>
+              <div class="amenity-title">TOWER EXCLUSIVE AMENITIES & FACILITIES</div>
+              <img src="/assets/Rectangle 73.png" class="amenity-img" alt="Amenity 2">
+              <p class="amenity-text">
+                With A Wide Range Of Active And Relaxing Hubs, Kids As Well As Adult Spaces And Curated Indoor & Outdoor
+                Activities, Be Tempted To Try Something New Every Day.
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-3 col-sm-6">
+            <div class="amenity-card">
+              <div class="amenity-number">3</div>
+              <div class="amenity-title">RECREATIONAL AMENITIES & FACILITIES</div>
+              <img src="/assets/Rectangle 74.png" class="amenity-img" alt="Amenity 3">
+              <p class="amenity-text">
+                With A Wide Range Of Active And Relaxing Hubs, Kids As Well As Adult Spaces And Curated Indoor & Outdoor
+                Activities, Be Tempted To Try Something New Every Day.
+              </p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="col-md-3 col-sm-6">
+            <div class="amenity-card">
+              <div class="amenity-number">4</div>
+              <div class="amenity-title">MULTIPURPOSE GAMES ROOM</div>
+              <img src="/assets/Rectangle 75.png" class="amenity-img" alt="Amenity 4">
+              <p class="amenity-text">
+                With A Wide Range Of Active And Relaxing Hubs, Kids As Well As Adult Spaces And Curated Indoor & Outdoor
+                Activities, Be Tempted To Try Something New Every Day.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section style="background-color: #1A2440;">
+      <div class="container text-white py-5">
+        <!-- Heading -->
+        <p class="mb-4" style="font-size: 2.5rem; font-family: 'Lora', serif; font-weight: 400; line-height: 1.3;">
+          SPECTACULAR<br>
+          SURROUNDINGS<br>
+          AS FAR AS THE EYE CAN SEE
+        </p>
+
+        <!-- Description -->
+        <p class="animate__animated animate__fadeInUp mb-5"
+          style="font-size: 1rem; font-family: 'Poppins', serif; font-weight: 300; color:rgba(165, 165, 165, 1); letter-spacing: 0.09em; line-height: 1.6;">
+          Piramal Aranya is an ode to perfection. It balances<br class="d-none d-md-block">
+          contemporary design with the scenic natural beauty of its<br class="d-none d-md-block">
+          environment. Every residence invites you to soak in the<br class="d-none d-md-block">
+          surroundings, from the endless greenery of Rani Baug on the<br class="d-none d-md-block">
+          western side and the shimmering Arabian Sea on the east.<br class="d-none d-md-block">
+          Avyan at Piramal Aranya will be home to something truly<br class="d-none d-md-block">
+          spectacular with premium dual aspect living
+        </p>
+
+        <!-- Stats Section -->
+        <div class="row text-center mb-4">
+          <div class="col-4">
+            <p class="h3 fw-bold text-success">66%</p>
+            <p class="small">Botanical garden views</p>
+          </div>
+          <div class="col-4">
+            <p class="h3 fw-bold text-success">33%</p>
+            <p class="small">Mumbai harbour & garden views</p>
+          </div>
+          <div class="col-4">
+            <p class="h3 fw-bold text-success">66%</p>
+            <p class="small">Mumbai harbour views</p>
+          </div>
+        </div>
+
+        <hr class="border-light">
+
+        <!-- Location Heading -->
+        <p class="text-center mb-1" style="font-family:Poppins; color:rgba(0, 229, 161, 1); font-size: 12px;">LOCATION
+        </p>
+        <p class="text-center text-white mb-5"
+          style="font-family: 'Lora', serif; font-weight: 500; font-size: 2.5rem; letter-spacing: -0.05em;">
+          NEIGHBORHOOD
+        </p>
+      </div>
+
+      <!-- Contact & Map Section -->
+      <section style="background-color: #1A2440; position: relative;" id="contact">
+        <!-- Map as background -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 1;">
+          <img src="/assets/image 3.png" alt="Map" class="w-100 h-100" style="object-fit: cover; opacity: 0.25;">
+        </div>
+
+        <!-- Contact Form -->
+        <div class="container position-relative z-2 py-5">
+          <div class="row justify-content-left">
+            <div class="col-md-6 p-5 rounded shadow-lg ">
+              <h2 class="text-white mb-3" style="font-family: Lora;">CONTACT US</h2>
+              <p class="text-light mb-4" style="font-family: Poppins; font-size: 14px;">
+                Please enter details below and we shall get in touch with you shortly
+              </p>
+
+              <form>
+                <div class="input-group mb-3">
+                  <span class="input-group-text bg-dark text-white"><i class="bi bi-person-fill"></i></span>
+                  <input type="text" class="form-control" placeholder="Full Name">
+                </div>
+
+                <div class="input-group mb-3">
+                  <span class="input-group-text bg-dark text-white"><i class="bi bi-telephone-fill"></i></span>
+                  <input type="text" class="form-control" placeholder="Contact Number">
+                </div>
+
+                <div class="input-group mb-4">
+                  <span class="input-group-text bg-dark text-white"><i class="bi bi-envelope"></i></span>
+                  <input type="email" class="form-control" placeholder="Email Address">
+                </div>
+
+                <button type="submit" class="btn w-100"
+                  style="background: rgba(0,229,161,1); color: #fff; font-weight: 500;">SUBMIT</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="text-center py-5" style="background-color: rgba(243, 244, 249, 1);">
+      <div class="container-fluid">
+
+        <!-- Call Us Section -->
+        <div class="mb-4">
+          <p class="text-dark" style="font-size: 24px; font-family: 'Lora'; font-weight: 500;">Call Us</p>
+          <div class="bg-dark rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+            style="width: 90px; height: 90px;">
+            <i class="fas fa-phone-alt text-white fs-4"></i>
+          </div>
+          <p class="text-dark fw-bold" style="font-size: 36px; font-family: 'Lora';">
+            <strong>+ 022</strong> 506 47538
+          </p>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3 mb-4">
+          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
+            style="width: 50px; height: 50px; background-color: rgba(0, 229, 161, 1); color: white;">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
+            style="width: 50px; height: 50px; background-color: white; color: black;">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
+            style="width: 50px; height: 50px; background-color: white; color: black;">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+
+        <!-- Logo -->
+        <div class="mb-4">
+          <img src="/assets/logo.png" alt="Logo" style="max-width: 120px; height: auto;">
+        </div>
+
+        <!-- Footer Bottom -->
+        <p class="small text-dark mb-0 pt-3"
+          style="border-top: 1px solid rgb(174, 174, 174); font-size: 12px; font-family: 'Poppins'; font-weight: 500;">
+          © 2023 <strong>Airamal</strong>. ALL RIGHTS RESERVED.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+</html>
