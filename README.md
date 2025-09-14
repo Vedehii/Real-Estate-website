@@ -12,8 +12,6 @@ A responsive real estate website built with **HTML, CSS, Bootstrap, and JavaScri
 - HTML5  
 - CSS3  
 - Bootstrap 5  
-- JavaScript (Vanilla JS)  
+- JavaScript
 
----
-*(Private Repository – No public deployment yet)*  
 
